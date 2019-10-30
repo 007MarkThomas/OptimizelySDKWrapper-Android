@@ -47,7 +47,7 @@ public class MyApplication extends Application {
         OptimizelyManager.Builder builder = OptimizelyManager.builder();
         optimizelyManager =  builder.withEventDispatchInterval(60L * 10L)
                 .withDatafileDownloadInterval(60L * 10L)
-                .withSDKKey("RhSxRsZPxCgZxtAEcanpE9") //Please add your sdk key here!!
+                .withSDKKey("///") //Please add your sdk key here!!
                 .build(getApplicationContext());
     }
 }
