@@ -23,7 +23,7 @@ After installing SDK add the all files into your app.
 
 There are a few things you need to change to get started: 
 
-In the “OptimizelyWrapper” file change the ‘jsonDatafile’ variable to point to your datafile. Your link is available in the Optimizely dashboard under Settings. 
+In the “MyApplication” file line 50 change the sdk to your SDK Key which is also found in the Optimizely dashboard under the settings. 
 
 Also in the “OptimizelyWrapper” file change the “sdkKey” to your SDK key which is also found in the Optimizely dashboard under the Settings.
 
