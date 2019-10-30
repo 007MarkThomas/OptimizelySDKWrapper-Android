@@ -19,7 +19,7 @@ https://docs.developers.optimizely.com/full-stack/docs/install-sdk-android
 
 <H2><B>Usage:</B></H2>
 
-After installing SDK add the "OptimizelyWrapper" file into your app. 
+After installing SDK add the all files into your app. 
 
 There are a few things you need to change to get started: 
 
