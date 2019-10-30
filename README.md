@@ -23,7 +23,7 @@ After installing SDK add the all files into your app.
 
 There are a few things you need to change to get started: 
 
-In the “MyApplication” file line 50 change the "sdkKey" to your SDK Key which is also found in the Optimizely dashboard under the settings. 
+In the “MyApplication” file line 50 change the ".withSDKKey" to your SDK Key which is also found in the Optimizely dashboard under the settings. 
  
 
 <H2><B>Extra Information: </B></H2>
