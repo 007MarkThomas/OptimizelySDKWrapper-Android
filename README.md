@@ -11,7 +11,7 @@ This is a wrapper of the Optimizely Android SDK written entirely in Java. The wr
 
  
 
-To use this Wrapper you need to first download the Optimizely Android SDK.  
+To use this Wrapper you need to first install the Optimizely Android SDK.  
 
 https://docs.developers.optimizely.com/full-stack/docs/install-sdk-android
 
@@ -29,7 +29,6 @@ In the “MyApplication” file line 50 change the "sdkKey" to your SDK Key whic
 <H2><B>Extra Information: </B></H2>
 
 <ul>
- <li>Installing the SDK: https://docs.developers.optimizely.com/full-stack/docs/install-sdk-android</li>
  <li>Initializing the SDK and Datafile Polling: https://docs.developers.optimizely.com/full-stack/docs/initialize-sdk-android</li>
  <li>Customizing the Logger: https://docs.developers.optimizely.com/full-stack/docs/customize-logger-android</li>
  <li>Customizing the Error Handler: https://docs.developers.optimizely.com/full-stack/docs/customize-error-handler-android</li>
