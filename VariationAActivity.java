@@ -37,6 +37,9 @@ public class VariationAActivity extends AppCompatActivity {
         check();
 
 
+        /**
+         * Example Usage of the wrapper testing if the feature is enabled
+         */
         Boolean enabled = OptimizelyWrappers.isFeatureEnabled(optimizelyManager, OptimizelyFeatures.NewScreenFeature,myApplication.getAnonUserId());
 
         if(enabled) {

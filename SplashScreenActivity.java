@@ -71,6 +71,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         Intent intent = null;
 
+        /**
+         * Example Usage of the wrapper to activate an experiment
+         */
+
         String variationKey = OptimizelyWrappers.activateForABTesting(optimizelyManager,OptimizelyExperiments.userProfileExperiments,userId,attributes);
         if (variationKey != null) {
             if (variationKey.equals("variation_1")) {
