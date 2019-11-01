@@ -13,14 +13,21 @@ import java.util.Map;
 public class OptimizelyWrappers {
 
 
-    private OptimizelyManager optimizelyManager;
+    //Initialize Optimizely Client
 
+    public static void initializeOptimizelyClient(OptimizelyManager optimizelyManager, Context context) {
 
-    public OptimizelyWrappers(OptimizelyManager optimizelyManager){
-        this.optimizelyManager = optimizelyManager;
+        optimizelyManager.initialize(context, null, new OptimizelyStartListener() {
+            @Override
+            public void onStart(OptimizelyClient optimizelyClient) {
+                return;
+            }
+        });
     }
 
-    public static String activateExperiment(OptimizelyManager optimizelyManager,String experimentKey,String userId,Map<String, Object> attributes)  {
+    //Activate single experiment
+
+    public static String activateForABTesting(OptimizelyManager optimizelyManager,String experimentKey,String userId,Map<String, Object> attributes)  {
         if(attributes.isEmpty()) {
             Variation v1 = optimizelyManager.getOptimizely().activate(experimentKey, userId, null);
             return v1.getKey();
@@ -29,6 +36,23 @@ public class OptimizelyWrappers {
             return v1.getKey();
         }
     }
+
+    //Get Feature Variables
+
+    public static int getFeatureVariableInteger(OptimizelyManager optimizelyManager, String featureKey,String variableKey,String userId, Map<String, Object> attributes) {
+        return optimizelyManager.getOptimizely().getFeatureVariableInteger(featureKey, variableKey, userId, attributes);
+    }
+
+    public static double getFeatureVariableDouble(OptimizelyManager optimizelyManager, String featureKey,String variableKey,String userId, Map<String, Object> attributes) {
+        return optimizelyManager.getOptimizely().getFeatureVariableDouble(featureKey, variableKey, userId, attributes);
+    }
+
+    public static String getFeatureVariableString(OptimizelyManager optimizelyManager, String featureKey,String variableKey,String userId, Map<String, Object> attributes) {
+        return optimizelyManager.getOptimizely().getFeatureVariableString(featureKey, variableKey, userId, attributes);
+    }
+
+
+    //Get Variation Key
 
     public static String getVariationKey(OptimizelyManager optimizelyManager,String experimentKey,String userId, Map<String, Object> attributes) {
        if(attributes.isEmpty()) {
@@ -40,9 +64,13 @@ public class OptimizelyWrappers {
        }
     }
 
+    //Is feature enabled
+
     public static Boolean isFeatureEnabled(OptimizelyManager optimizelyManager, String featureID, String userID) {
         return optimizelyManager.getOptimizely().isFeatureEnabled(featureID,userID);
     }
+
+    //Track Event
 
     public static void trackEvent(OptimizelyManager optimizelyManager, String eventKey, String userId, Map<String, Object> attributes)  {
         if(attributes.isEmpty()) {
@@ -52,14 +80,7 @@ public class OptimizelyWrappers {
         }
     }
 
-    public static void initializeOptimizelyClient(OptimizelyManager optimizelyManager, Context context) {
-        optimizelyManager.initialize(context, null, new OptimizelyStartListener() {
-            @Override
-            public void onStart(OptimizelyClient optimizelyClient) {
-                return;
-            }
-        });
-    }
+
 
 
 

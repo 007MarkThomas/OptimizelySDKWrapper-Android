@@ -2,7 +2,6 @@ package com.practice.androidoptimizely;
 
 /**
  * This class stores the names of the events
- * Example way of structuring your events
  */
 
 

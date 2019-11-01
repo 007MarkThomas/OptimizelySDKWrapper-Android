@@ -19,6 +19,8 @@ public class MyApplication extends Application {
 
 
 
+    // MARK: Generated my own user ID for the purpose of testing
+
     @NonNull
     public String getAnonUserId() {
         // this is a convenience method that creates an anonymous user id,
@@ -39,6 +41,7 @@ public class MyApplication extends Application {
         int randomInt = (int) randomDouble;
         return randomInt;
     }
+    //
 
 
     @Override
@@ -47,7 +50,7 @@ public class MyApplication extends Application {
         OptimizelyManager.Builder builder = OptimizelyManager.builder();
         optimizelyManager =  builder.withEventDispatchInterval(60L * 10L)
                 .withDatafileDownloadInterval(60L * 10L)
-                .withSDKKey("///") //Please add your sdk key here!!
+                .withSDKKey("RhSxRsZPxCgZxtAEcanpE9") //Please add your sdk key here!!
                 .build(getApplicationContext());
     }
 }
